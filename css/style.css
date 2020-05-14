@@ -18,6 +18,8 @@ a,p{
 	width: 100vw;
 	
 	z-index: -1;
+	
+	object-fit: cover;
 
 	background-position: center;
 	background-repeat: no-repeat;
@@ -33,12 +35,6 @@ a,p{
 	}
 }
 
-header{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 /* menu */
 
@@ -47,7 +43,9 @@ header{
 	top: 0;
 	width: 100vw;
 	background-color: rgba(52, 11, 139, 0.472);
+	z-index: 1;
 }
+
 
 .menu ul{
 	display:flex;
@@ -58,22 +56,26 @@ header{
 	list-style: none;
 }
 
+
 .menu a{
 	display: block;
 	padding: 10px 20px;
 
-	color: #a200ff;
+	color: #ffffff;
 	font-weight: bold;
 
-	background-color: #02020298;
+	background: linear-gradient(40deg,#8432D1 ,#4D1284  100%) ;
 	text-decoration: none;
-
+	box-shadow: 3px 3px #4D1284;
 	border-radius: 25px 10px;
 	border: solid;
+	transition: color 0.5s,box-shadow 0.5s;
+
 }
 
 .menu a:hover{
 	color: #ff00bf;
+	box-shadow: 3px 3px #720055;
 }
 
 .menu a:active{
@@ -81,12 +83,56 @@ header{
 }
 
 
+.menu .i-home a{
+	border: none;
+	padding: 10px;
+	border-radius: 100%;
+	
+}
+
 /* Header */
+
+header{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .site-subtitle,
 .site-title{
-	color: GHOSTWHITE;
+	color: #ffff;
 	text-align: center;
+}
+
+.site-title{
+	animation: 
+	0s 3800ms forwards cor, 
+	3750ms forwards linear barra;
+	display: block;
+	border-right: 5px solid black;
+}
+
+@keyframes cor{
+	0%{
+		color: #ffff;
+	}
+	100%{
+		color: #85E7F2;
+	}
+}
+@keyframes barra{
+	0%{
+		width: 3.125rem;
+	}
+	99.9%{
+		width: 755px;
+		border-right: 5px solid black;
+	}
+	100%{
+		width: auto;
+		border-right:none;
+	}
 }
 
 .site-subtitle{
@@ -96,7 +142,7 @@ header{
 .social-icons{
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	list-style: none;
 	height: 100px;
@@ -156,7 +202,7 @@ header{
 
 .scroll{
 	position: relative;
-	top: -20vh;
+	top: -25vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -193,13 +239,13 @@ header{
 /* Portifolio */
 
 .portifolio{
-	padding: 2rem;
-	height: 100vh;
+	padding: 4rem;
+	min-height: 100vh;
 }
 
 .portifolio h2{
 	margin-bottom: 2rem;
-	font-size: 2rem;
+	font-size: 3rem;
 	color: #ffff;
 }
 
@@ -231,7 +277,14 @@ header{
 
 .img-portfolio{
 	object-fit: cover;
-	border-radius: 10px;
+	border-radius: 15px;
 	height: 180px;
 	width: 240px;
+	transition: transform ease-out .2s;
+}
+
+.img-portfolio:hover {
+	display: block;
+	transform: scale(1.5);
+
 }

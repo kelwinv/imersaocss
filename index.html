@@ -1,26 +1,37 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kelwin v</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/0f78eb48a0.js" crossorigin="anonymous"></script>
-  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166444690-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-166444690-1');
+  </script>
 </head>
 <body>
   <img src="./assets/background1.jpg" alt="background" class="background">
   <header>
     <nav class="menu">
       <ul>
+        <li class="i-home" style="display:none" ><a href="#"><i class="fas fa-home"></i></a></li>
         <li><a href="#">Sobre</a></li>
-        <li><a href="#">Portifóilio</a></li>
+        <li><a href="#portifolio">Portifóilio</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
     </nav>
     <div>
-      <h1 class="site-title" >Kelwin</h1>
-      <h2 class="site-subtitle" >jr.Web developer</h2>
+      <div class="titles-header">
+        <h1 class="site-title" ></h1>
+        <h2 class="site-subtitle"></h2>
+      </div>
       <ul class="social-icons">
         <li><a target="_black" href="https://github.com/kelwinv/"><i class="fab fa-github"></i></a></li>
         <li><a target="_black" href="https://www.linkedin.com/in/kelwin-vieira-ab95801a4/"><i class="fab fa-linkedin-in"></i></a></li>
@@ -35,7 +46,7 @@
     </div>
   </section>
 
-  <section class="portifolio">
+  <section class="portifolio" id="portifolio">
     <h2>Portfólio</h2> 
     <div class="grid">
       <figure>
