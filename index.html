@@ -21,10 +21,10 @@
   <header>
     <nav class="menu">
       <ul class="container">
-        <li class="i-home" style="display:none" ><a href="#"><i class="fas fa-home"></i></a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#portifolio">Portifóilio</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li onclick="scrollFunction()" class="i-home" style="display:none" ><a href="#"><i class="fas fa-home"></i></a></li>
+        <li><a onclick="scrollFunction()" href="#sobre">Sobre</a></li>
+        <li><a onclick="scrollFunction()" href="#portifolio">Portifóilio</a></li>
+        <li><a onclick="scrollFunction()" href="#contato">Contato</a></li>
       </ul>
     </nav>
     <div>
@@ -49,25 +49,11 @@
   <section class="sobre container" id="sobre">
     <h2>Sobre</h2>
     <div class="leitura">
-      <figure class="profile">
-  
-      </figure>
-  
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, dignissimos. Quod perspiciatis sed, laudantium nam omnis dolore eligendi nostrum consequatur quaerat repudiandae nemo, ullam ad dicta tempora ipsa unde sunt?
-      </p>
-      <p>
-        Minus laboriosam, nihil ipsam aspernatur ut modi? Hic at ipsam placeat odit perspiciatis, quibusdam eos eveniet neque rerum delectus maiores voluptate accusamus soluta facere iste sequi sint! Officia, ipsa quam?
-      </p>
-      <p>
-        Reprehenderit, consequuntur eos? Dicta optio nisi ut iure fugiat aut magnam dignissimos ullam, similique dolorem quibusdam ducimus reprehenderit modi delectus velit quae maiores quidem, ab neque saepe soluta aliquam consectetur.
-      </p>
-      <p>
-        Este site foi feito durante a <a target="_blank" href="https://www.alura.com.br/imersao-css">Imersão Css da alura</a>
-      </p>
+      <p class="text-sobre"></p>
     </div>
-
-    
+        <p class="creditos">
+          Este site foi feito durante a <a target="_blank" href="https://www.alura.com.br/imersao-css">Imersão Css da alura</a>
+        </p>
   </section>
 
   <section class="portifolio container" id="portifolio">

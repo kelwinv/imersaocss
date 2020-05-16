@@ -14,7 +14,7 @@ a,p{
 
 h2{
 	margin-bottom: 2rem;
-	font-size: 3rem;
+	font-size: 2rem;
 	color: #ffff;
 }
 
@@ -35,9 +35,6 @@ h2{
 @media (min-width: 450px) {
 	a,p{
 	font-size: 1.5rem;
-	}
-	h1{
-		font-size: 4em;
 	}
 }
 
@@ -111,12 +108,16 @@ header{
 	text-align: center;
 }
 
-.site-title{
-	animation: 
-	0s 3800ms forwards cor, 
-	3750ms forwards linear barra;
-	display: block;
-	border-right: 5px solid black;
+.site-title {
+	position: relative;
+	animation: 0s 3800ms forwards cor;	
+	font-size: 2.5rem;
+}
+
+.site-title:after {
+	content: '|';
+	color: #ffffff;
+	animation: 1s 4s infinite barra;
 }
 
 @keyframes cor{
@@ -127,22 +128,27 @@ header{
 		color: #85E7F2;
 	}
 }
+
+
 @keyframes barra{
 	0%{
-		width: 3.125rem;
+		opacity: 1;
 	}
-	99.9%{
-		width: 755px;
-		border-right: 5px solid black;
+	25%{
+		opacity: 0;
 	}
-	100%{
-		width: auto;
-		border-right:none;
-	}
+
 }
 
 .site-subtitle{
 	font-style:italic;
+	font-size: 1.5rem;
+}
+
+@media(min-width:960px){
+	.site-title{
+		font-size: 5rem;
+	}
 }
 
 .social-icons{
@@ -276,8 +282,14 @@ header{
 	color: cyan;
 }
 
-.sobre .profile{
+.leitura{
+	font-size: 2rem;
+	color: #ffff;
+}
 
+.sobre .creditos{
+	margin-top: 2rem;
+	text-align: end;
 }
 
 @media (min-width:1200px){
@@ -313,7 +325,7 @@ header{
 
 @media (min-width: 800px){
 	.portifolio .grid{
-		gap: 3rem;
+		gap: 4rem;
 		align-content: center;
 		height: calc(100vh - 4rem - 48px - 1.5rem);
 	}
@@ -327,14 +339,14 @@ header{
 	object-fit: cover;
 	border-radius: 15px;
 	width: 100%;
-	height: 180px;
+	height: 10rem;
 	transition: transform ease-out .2s;
 }
 
 
 .flip-card{
-	perspective: 250px;
-	height: 180px;
+	perspective: 400px;
+	height: 10rem;
 }
 
 
